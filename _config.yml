@@ -32,7 +32,9 @@ plugins:
   - jekyll-feed
 
 disqus:
-  shortname: mynosefroze.com
+  shortname: mynosefroze
+
+permalink: /:year-:month-:day-:title
 
 # Exclude from processing.
 # The following items will not be processed, by default.
