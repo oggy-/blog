@@ -21,8 +21,8 @@
 title: Best blog in the wider universe.
 description: >-
   Ognjen Maric's blog, computer stuff.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://mynosefroze.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /blog # the subpath of your site, e.g. /blog
+url: https://mynosefroze.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username jekyllrb
 github_username: oggy-
 
@@ -30,6 +30,9 @@ github_username: oggy-
 theme: minima
 plugins:
   - jekyll-feed
+
+disqus:
+  shortname: mynosefroze.com
 
 # Exclude from processing.
 # The following items will not be processed, by default.
