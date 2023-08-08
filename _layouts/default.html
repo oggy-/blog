@@ -11,9 +11,9 @@
         {% if page.toc %}
         <nav class="toc-fixed">
             Contents
-            {% endif %}
+            {% toc %}
         </nav>
-        {% toc %}
+        {% endif %}
         <div id="body-content" class="wrapper">
             {{ content }}
         </div>

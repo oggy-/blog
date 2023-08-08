@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tutorial: Using TLA+ for Internet Computer Canisters"
-date:   2023-08-08
+date:   2023-08-09
 comments: true
 tag: distributed systems
 tag: leader election
