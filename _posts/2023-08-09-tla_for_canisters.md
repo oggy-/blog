@@ -249,8 +249,8 @@ Figure 1: The update_balance method of the ckBTC canister.
 
 Even though this is a single Rust function, this method actually defines
 *three* different message handlers:
-1. The first handler consists of lines 4-26, finishing with the call to get_utxos, which sends a message to the Bitcoin canister asking about the UTXOs that are owned by address.
-1. The second handler consists of lines 27-59; it processes the response from get_utxos, and finishes with the call to mint.
+1. The first handler consists of lines 4-22, finishing with the call to get_utxos, which sends a message to the Bitcoin canister asking about the UTXOs that are owned by address.
+1. The second handler consists of lines 23-50; it processes the response from get_utxos, and finishes with the call to mint.
 1. The third and last message handler then processes the response from mint, and completes the execution of the method.
 
 In general, message handlers are
