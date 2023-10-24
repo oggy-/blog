@@ -3,10 +3,10 @@ layout: post
 title:  "Tutorial: Using TLA+ for Internet Computer Canisters"
 date:   2023-08-09
 comments: true
-tag: distributed systems
-tag: leader election
-tag: distributed commit
-tag: consensus
+tag: TLA+
+tag: formal verification
+tag: smart contracts
+tag: Internet Computer
 toc: true
 ---
 
