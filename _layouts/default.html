@@ -7,6 +7,10 @@
 
     {%- include header.html -%}
 
+    <!-- Syntax highlighting using Shiki -->
+    <script src="https://unpkg.com/shiki"></script>
+    {% shikyll_script %}
+
     <main class="page-content" aria-label="Content">
         {% if page.toc %}
         <nav class="toc-fixed">
