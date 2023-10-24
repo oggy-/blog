@@ -1,6 +1,7 @@
 body {
     display: flex;
     height: 100%;
+    position: relative;
 }
 
 #toc-wrapper {
@@ -8,15 +9,15 @@ body {
     overflow-y: auto;
     transition: width 0.3s;
     position: fixed;
-    background: #ffffff;
+    background-color: white;
     z-index: 1;
 }
 
 
 #non-toc-wrapper {
-    position: relative;
-    left: 250px;
     z-index: 0;
+    float: right;
+    position: relative;
 }
 
 /* -- Slideout Sidebar -- */
