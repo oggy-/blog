@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
+
 {%- include head.html -%}
 
 <body>
@@ -13,17 +14,26 @@
 
     <main class="page-content" aria-label="Content">
         {% if page.toc %}
+        <!-- Hidden checkbox input -->
+        <input type="checkbox" id="toc-toggle" class="toc-toggle">
+
+        <!-- Toggle Button -->
+        <label for="toc-toggle" class="toc-icon">
+            <img src="/blog/assets/images/sidebar-collapse.svg" alt="Toggle TOC"/>
+        </label>
+
         <nav class="toc-fixed">
-            Contents
             {% toc %}
         </nav>
         {% endif %}
         <div id="body-content" class="wrapper">
             {{ content }}
         </div>
+
     </main>
 
     {%- include footer.html -%}
+    <script src="/blog/assets/js/layout.js"></script>
 
 </body>
 
