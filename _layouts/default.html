@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
+    <script src="/blog/assets/js/layout.js"></script>
 
 
 {%- include head.html -%}
@@ -12,8 +13,8 @@
     <script src="https://unpkg.com/shiki"></script>
     {% shikyll_script %}
 
-    <main class="page-content" aria-label="Content">
-        {% if page.toc %}
+    {% if page.toc %}
+    <div id="toc-wrapper">
         <!-- Hidden checkbox input -->
         <input type="checkbox" id="toc-toggle" class="toc-toggle">
 
@@ -25,15 +26,20 @@
         <nav class="toc-fixed">
             {% toc %}
         </nav>
-        {% endif %}
-        <div id="body-content" class="wrapper">
-            {{ content }}
-        </div>
+    </div>
+    {% endif %}
 
-    </main>
+    <div id="non-toc-wrapper">
+        <main class="page-content" aria-label="Content">
+            <div id="body-content" class="wrapper">
+                {{ content }}
+            </div>
 
-    {%- include footer.html -%}
-    <script src="/blog/assets/js/layout.js"></script>
+        </main>
+        {%- include footer.html -%}
+    </div>
+
+
 
 </body>
 

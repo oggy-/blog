@@ -1,12 +1,32 @@
+body {
+    display: flex;
+    height: 100%;
+}
+
+#toc-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    transition: width 0.3s;
+    position: fixed;
+    background: #ffffff;
+    z-index: 1;
+}
+
+
+#non-toc-wrapper {
+    position: relative;
+    left: 250px;
+    z-index: 0;
+}
+
 /* -- Slideout Sidebar -- */
 nav.toc-fixed {
-    position: fixed;
-    top: 60px;
-    left: -290px;
-    z-index: 0;
     width: 250px;
-    height: 100%;
-    padding: 20px;
+    top: 60px;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 20px;
     background-color: transparent;
     transition: all 300ms ease-in-out;
 }
@@ -24,82 +44,22 @@ nav.toc-fixed {
 
 #toc-toggle {
     display: none;
+    z-index: 1;
 }
 
 .toc-icon {
-    position: absolute;
+    padding-left: 20px;
+    display: block;
     top: 60px;
     left: 30px;
-    font-size: 24px;
     z-index: 1;
     transition: all 300ms ease-in-out;
 }
 
-
-/*-- The Magic --*/
-#toc-toggle:checked ~ nav.toc-fixed {
-    left: 0px;
-}
-#toc-toggle:checked + .toc-icon {
-    left: 310px;
-}
-#toc-toggle:checked ~ #body-content.wrapper {
-    padding-left: 290px;
+#body-content {
+    overflow-y: auto;
 }
 
-
-@media (max-width: 991px) {
-  #body-content.wrapper {
-    max-width: 480px;
-  }
-}
-@media (max-width: 767px) {
-  #body-content.wrapper {
-    max-width: 100%;
-    margin: 30px auto 0;
-  }
-
-  #toc-toggle:checked ~ #body-content.wrapper {
-    padding-left: 0;
+.collapsed {
     display: none;
-  }
-
-  nav.toc-fixed ul {
-    text-align: center;
-    max-width: 200px;
-    margin: 30px auto 0;
-  }
-
-  .toc-icon {
-    left: 20px
-  }
-
-  #toc-toggle:checked ~ nav.toc-fixed {
-    width: 100%;
-  }
-
-  #toc-toggle:checked + .toc-icon {
-    left: 87%;
-    color: #fafafa;
-  }
-
-  @media screen  
-    and (max-width: 736px) 
-    and (orientation: landscape) {
-
-      nav.toc-fixed {
-        padding: 0;
-      }
-      nav.toc-fixed ul {
-        max-width: 100%;
-        margin: 60px auto 0;
-      }
-
-      nav.toc-fixed ul li {
-        display: inline-block;
-        border-bottom: 0;
-        padding: 6x 24px;
-        margin: 0 6px 6px;
-      }
-  }
 }

@@ -8,6 +8,19 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-betwen;
+      align-items: center;
+  }
+}
+
+.site-header::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .site-title {
@@ -16,7 +29,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
+  flex: 1;
 
   &,
   &:visited {
@@ -25,7 +38,6 @@
 }
 
 .site-nav {
-  float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
@@ -47,7 +59,7 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
+    // position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
     background-color: $background-color;
@@ -57,7 +69,6 @@
 
     label[for="nav-trigger"] {
       display: block;
-      float: right;
       width: 36px;
       height: 36px;
       z-index: 2;
@@ -66,7 +77,6 @@
 
     .menu-icon {
       display: block;
-      float: right;
       width: 36px;
       height: 26px;
       line-height: 0;
