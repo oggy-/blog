@@ -61,6 +61,7 @@ nav.toc-fixed {
 
   #toc-toggle:checked ~ #body-content.wrapper {
     padding-left: 0;
+    display: none;
   }
 
   nav.toc-fixed ul {
