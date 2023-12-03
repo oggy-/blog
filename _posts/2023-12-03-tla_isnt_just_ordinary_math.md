@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "TLA isn't \"just ordinary math\""
+date:   2023-12-03
 comments: true
 tag: TLA+
 tag: formal verification

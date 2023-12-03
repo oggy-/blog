@@ -2,7 +2,6 @@
 layout: post
 title:  "Coordination Problems in Distributed Systems"
 date:   2023-07-21 16:45:08 +0200
-categories: jekyll update
 comments: true
 tag: distributed systems
 tag: leader election
