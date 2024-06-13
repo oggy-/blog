@@ -20,7 +20,7 @@
 
 title: Once upon the time, my nose actually froze.
 description: >-
-  Ognjen Maric's blog, computer stuff.
+  Ognjen Maric's blog. Computers & more.
 baseurl: /blog # the subpath of your site, e.g. /blog
 url: https://mynosefroze.com # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username jekyllrb
